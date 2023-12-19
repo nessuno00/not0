@@ -1,0 +1,54 @@
+class Prodotto {
+    private String nome;
+    private double prezzo;
+    private int quantita;
+
+    public Prodotto(String nome, double prezzo, int quantita) {
+        this.nome = nome;
+        this.prezzo = prezzo;
+        this.quantita = quantita;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public double getPrezzo() {
+        return prezzo;
+    }
+
+    public void setPrezzo(double prezzo) {
+        this.prezzo = prezzo;
+    }
+
+    public int getQuantita() {
+        return quantita;
+    }
+
+    public void setQuantita(int quantita) {
+        this.quantita = quantita;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Prodotto prodotto1 = new Prodotto("Prodotto 1", 19.99, 10);
+        Prodotto prodotto2 = new Prodotto("Prodotto 2", 29.99, 5);
+        Prodotto prodotto3 = new Prodotto("Prodotto 3", 9.99, 20);
+        Prodotto prodotto4 = new Prodotto("Prodotto 4", 39.99, 8);
+
+        // Puoi accedere ai valori degli oggetti così:
+        System.out.println("Nome prodotto 1: " + prodotto1.getNome());
+        System.out.println("Prezzo prodotto 2: " + prodotto2.getPrezzo());
+        System.out.println("Quantità prodotto 3: " + prodotto3.getQuantita());
+        System.out.println("Nome prodotto 4 prima della modifica: " + prodotto4.getNome());
+
+        // Modifica di un attributo dell'oggetto
+        prodotto4.setNome("Nuovo Nome Prodotto 4");
+        System.out.println("Nome prodotto 4 dopo la modifica: " + prodotto4.getNome());
+    }
+}
